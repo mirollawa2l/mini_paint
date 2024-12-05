@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.mini_paint;
+package Backend;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -21,10 +21,8 @@ public class Circle extends ShapeII{
     @Override
     public void draw(Graphics canvas) {
        double r= super.getProperties().get("radius");
-        System.out.println("draw"+r);
+       
        int radius=(int) r;
-        System.out.println("int draw"+radius);
-        System.out.println("x= "+position.x+" y= "+position.y);
            canvas.setColor(this.fillColor);
         canvas.fillOval(position.x - radius, position.y - radius, 2 * radius, 2 * radius);
         canvas.setColor(this.color);

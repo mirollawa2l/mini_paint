@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package com.mycompany.mini_paint;
+package Frontend;
 
 import javax.swing.JOptionPane;
 
@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author mirol
  */
-public class LineSegmentWindow1 extends javax.swing.JDialog {
+public class LineSegmentWindow extends javax.swing.JDialog {
      private int x1,y1;
 private double x2,y2;
 
@@ -33,10 +33,11 @@ private double x2,y2;
     /**
      * Creates new form LineSegmentWindow1
      */
-    public LineSegmentWindow1(java.awt.Frame parent, boolean modal) {
+    public LineSegmentWindow(java.awt.Frame parent, boolean modal) {
          super(parent, modal);
         initComponents();
          setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+       setTitle("Line Segment");
     }
 
     /**
@@ -170,7 +171,7 @@ private double x2,y2;
         else {
             x1 = Integer.parseInt(inx1);
             y1 = Integer.parseInt(iny1);
-            x2 = Double.parseDouble(inx1);
+            x2 = Double.parseDouble(inx2);
             y2 = Double.parseDouble(iny2);
 
             this.setVisible(false);
@@ -194,20 +195,21 @@ private double x2,y2;
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LineSegmentWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LineSegmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LineSegmentWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LineSegmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LineSegmentWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LineSegmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LineSegmentWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LineSegmentWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                LineSegmentWindow1 dialog = new LineSegmentWindow1(new javax.swing.JFrame(), true);
+                LineSegmentWindow dialog = new LineSegmentWindow(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

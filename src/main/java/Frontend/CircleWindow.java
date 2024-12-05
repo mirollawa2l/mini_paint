@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package com.mycompany.mini_paint;
+package Frontend;
 
 import javax.swing.JOptionPane;
 
@@ -10,18 +10,18 @@ import javax.swing.JOptionPane;
  *
  * @author mirol
  */
-public class CircleWindow1 extends javax.swing.JDialog {
+public class CircleWindow extends javax.swing.JDialog {
    private int x,y;
     private double radius;
 
     /**
      * Creates new form CircleWindow1
      */
-    public CircleWindow1(java.awt.Frame parent, boolean modal) {
+    public CircleWindow(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
          setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-     
+         setTitle("Circle");    
     }
 
     /**
@@ -127,14 +127,13 @@ public class CircleWindow1 extends javax.swing.JDialog {
         String iny = inputY.getText();
 
         String inr = inputRadius.getText();
-        System.out.println("inputr "+inr );
+      
         if (inx.isEmpty() || iny.isEmpty() || inr.isEmpty())
         JOptionPane.showMessageDialog(this, "Some fields are Empty");
         else {
             x = Integer.parseInt(inx);
             y = Integer.parseInt(iny);
             radius = Double.parseDouble(inr);
-            System.out.println("input r in double "+radius);
             this.setVisible(false);
         }
     }//GEN-LAST:event_DrawActionPerformed
@@ -173,20 +172,21 @@ public class CircleWindow1 extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CircleWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CircleWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CircleWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CircleWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CircleWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CircleWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CircleWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CircleWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                CircleWindow1 dialog = new CircleWindow1(new javax.swing.JFrame(), true);
+                CircleWindow dialog = new CircleWindow(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {

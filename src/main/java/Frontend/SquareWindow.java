@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JDialog.java to edit this template
  */
-package com.mycompany.mini_paint;
+package Frontend;
 
 import javax.swing.JOptionPane;
 
@@ -10,7 +10,7 @@ import javax.swing.JOptionPane;
  *
  * @author mirol
  */
-public class SquareWindow1 extends javax.swing.JDialog {
+public class SquareWindow extends javax.swing.JDialog {
     
      private int x,y;
     private double side;
@@ -30,10 +30,11 @@ public class SquareWindow1 extends javax.swing.JDialog {
     /**
      * Creates new form SquareWindow1
      */
-    public SquareWindow1(java.awt.Frame parent, boolean modal) {
+    public SquareWindow(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
          setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+            setTitle("Square");
     }
 
     /**
@@ -182,20 +183,21 @@ public class SquareWindow1 extends javax.swing.JDialog {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(SquareWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SquareWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(SquareWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SquareWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(SquareWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SquareWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SquareWindow1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(SquareWindow.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the dialog */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                SquareWindow1 dialog = new SquareWindow1(new javax.swing.JFrame(), true);
+                SquareWindow dialog = new SquareWindow(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
                     @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -218,3 +220,4 @@ public class SquareWindow1 extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
+ 

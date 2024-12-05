@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.mini_paint;
+package Backend;
 
 import java.awt.Graphics;
 import static java.lang.String.valueOf;
@@ -18,9 +18,9 @@ public class Rectangle extends ShapeII{
        double length=super.getProperties().get("length");
         double width=super.getProperties().get("width");
              canvas.setColor(getFillColor());
-      canvas.fillRect(position.x, position.y,(int) width,(int) length);
+     canvas.fillRect(position.x, position.y,(int)length,(int) width);
         canvas.setColor(getColor());
-      canvas.drawRect(position.x, position.y,(int) width,(int) length);   
+      canvas.drawRect(position.x, position.y,(int) length,(int) width);   
    
       
     }
@@ -30,7 +30,7 @@ public class Rectangle extends ShapeII{
 double length=super.getProperties().get("length");
         double width=super.getProperties().get("width");
                   canvas.setColor(fillColor); 
-      canvas.fillRect(position.x, position.y,(int) width,(int) length);
+      canvas.fillRect(position.x, position.y,(int)length,(int) width);
     }
     
      @Override

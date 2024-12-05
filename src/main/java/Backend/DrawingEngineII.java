@@ -2,7 +2,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.mini_paint;
+package Backend;
+
 
 import java.awt.Graphics;
 import java.util.ArrayList;
@@ -17,23 +18,23 @@ public class DrawingEngineII implements DrawingEngine {
 
     private int circleCount = 0, lineCount = 0, squareCount = 0, recCount = 0;
 
-    public ArrayList<Shape> shapes = new ArrayList<>();
+    private ArrayList<Shape> shapes = new ArrayList<>();
     private Map<Shape, String> shapeList = new HashMap<>();
 
     @Override
-    public void addShape(Shape shape, String key) {
+    public void addShape(Shape shape) {
         int count = 0;
         shapes.add(shape);
-        if (key.equals("circle")) {
+        if (shape instanceof Circle) {
             count = circleCount;
             circleCount++;
-        } else if (key.equals("square")) {
+        } else if (shape instanceof Square) {
             count = squareCount;
             squareCount++;
-        } else if (key.equals("rectangle")) {
+        } else if (shape instanceof Rectangle) {
             count = recCount;
             recCount++;
-        } else if (key.equals("line")) {
+        } else if (shape instanceof LineSegment) {
             count = lineCount;
             lineCount++;
         }
