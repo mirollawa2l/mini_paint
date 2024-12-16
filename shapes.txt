@@ -1,0 +1,4 @@
+Circle0 150 100 40.0 java.awt.Color[r=0,g=0,b=0] java.awt.Color[r=255,g=255,b=255]
+Line0 150 50 150.0 200.0 java.awt.Color[r=0,g=0,b=0] java.awt.Color[r=255,g=255,b=255]
+Square0 70 80 60.0 java.awt.Color[r=0,g=0,b=0] java.awt.Color[r=255,g=255,b=255]
+Rectangle1 100 70 50.0 70.0 java.awt.Color[r=0,g=0,b=0] java.awt.Color[r=255,g=255,b=255]
